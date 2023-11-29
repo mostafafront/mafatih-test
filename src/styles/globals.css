@@ -1,3 +1,14 @@
+@import './all.css';
+@import './calender-style.css';
+@import './donate-style.css';
+@import './kfg-font.css';
+@import './reader-style.css';
+@import './regular.css';
+@import './root-colors.css';
+@import './style.css';
+
+
+
 * {
   box-sizing: border-box;
   padding: 0;
