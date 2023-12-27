@@ -1,8 +1,15 @@
 import { useEffect } from "react";
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css'; //میتونه نباشه
+
 
 export default function Home() {
 
-
+  useEffect(() => {
+    require('jquery/dist/jquery')
+    require('owl.carousel/dist/owl.carousel')
+  },[])
+  
   useEffect(() => {
     $(document).ready(function () {
       $(".owl-carousel").owlCarousel({
@@ -11,6 +18,28 @@ export default function Home() {
         dots: false,
         margin: 10,
         responsiveClass: true,
+        stopOnHover:true,
+        afterMove:function(){
+            //reset transform for all item
+            $(".owl-item").css({
+                transform:"none"
+            })
+            //add transform for 2nd active slide
+            $(".active").eq(1).css({
+                transform:"scale(1.9)",
+                zIndex:3000,
+
+            })
+
+        },
+        //set init transform
+        afterInit:function(){
+            $(".active").eq(1).css({
+                transform:"scale(1.9)",
+                zIndex:3000,
+
+            })
+        },
         responsive: {
           275: {
             items: 1
@@ -38,7 +67,6 @@ export default function Home() {
       });
     });
   },[])
-  
 
   return (
     <>
