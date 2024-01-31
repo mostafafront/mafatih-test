@@ -1,8 +1,7 @@
 import React from 'react'
 
-import data from '../api/data'
 
-export default function Test() {
+export default function Test({dataDoa}) {
 
   // const fs = require('fs').promises;
   // const data = JSON.parse(fs.readFile(process.cwd() + '/src/pages/api/data.json', 'utf-8'))
@@ -10,8 +9,10 @@ export default function Test() {
   // console.log(data)
   return (
     <>
-    {data.title}
+    <p>{dataDoa.title}</p>
+    
     <br/>
+    <p>{dataDoa.items.body}</p>
     </>
   )
 }

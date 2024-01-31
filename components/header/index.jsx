@@ -418,7 +418,7 @@ export default function HeaderComponent() {
 				<div className="themes overflow-y-auto d-flex flex-column justify-content-between align-items-center gap-2">
 					<img src="./images/light-theme.png" alt="theme light" />
 					<img src="./images/theme-sepia.png" alt="theme sepia" />
-					<img src="./images/dark-theme.png" alt="theme dark" />
+					<img src="./images/darkTheme.png" alt="theme dark" />
 				</div>
 				{/* <!-- THEMES IN OFFCANVAS HEADER --> */}
 				
